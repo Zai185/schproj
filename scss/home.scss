@@ -1,0 +1,118 @@
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+    // justify-content: center;
+}
+
+section {
+    margin: 16px 0;
+}
+
+.hero {
+    @include flex-center();
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(to bottom, #000d, #0009), url(../images/hero.jpg);
+    background-size: cover;
+    background-position: center;
+
+    .textbox {
+        width: 70%;
+        text-align: center;
+
+        h1 {
+            font-size: 3rem;
+            margin: 12px 0;
+        }
+
+        p {
+            width: 70%;
+            font-size: 0.8rem;
+            margin: 12px auto;
+        }
+
+        button {
+            padding: 12px 24px;
+            background: transparent;
+            border: 1px solid #eee;
+            border-radius: 24px;
+        }
+
+        button:hover {
+            box-shadow: 0 0 8px #eee;
+        }
+    }
+}
+
+.about {
+
+    
+    * {
+        font-family: 'Marcellus', serif;
+        color: var(--acent-color);
+    }
+    
+    .beach-box {
+        display: flex;
+        justify-content: center;
+        margin-top: 96px;
+
+        
+        
+        .textbox{
+            width: 42%;
+            h5{
+                font-size: 1rem;
+                font-weight: lighter;
+                letter-spacing: 2px;
+                padding-left: 8px;
+            }
+            h1{
+                font-size: 3rem;
+                text-transform: capitalize;
+                margin-bottom: 8px;
+                line-height: 1.2;
+            }
+            p{
+                font-size: 0.9rem;
+                line-height: 1.4;
+            }
+            button{
+                margin-top: 16px;
+                padding: 8px 24px;
+                background: transparent;
+                color: #111;
+                font-weight: bold;
+                border: 1px solid #aaaa;
+                background: var(--acent-color);
+            }
+        }
+        .imgbox {
+            position: relative;
+            width: 40%;
+            img{
+                position: absolute;
+                top: 30% ;
+                left: 50% ;
+                transform: translate(-50%, -50%);
+                width: 200px;
+                height: 148px;
+                object-fit: cover;
+
+            }
+            
+            .beach{
+                width: 148px;
+                height: 200px;
+                z-index: 3;
+                transform: translate(-48%, -8%);
+            }
+            .sand{
+                transform: translate(0, 74%);
+            }
+            .hill{
+                transform: translate(0, -60%);
+            }
+        }
+    }
+}

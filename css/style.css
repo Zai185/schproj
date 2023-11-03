@@ -1,0 +1,379 @@
+.text-shadow {
+  text-shadow: 0 0 8px #fff;
+}
+
+.hero {
+  z-index: 0;
+  position: relative;
+  height: 100vh;
+  background: linear-gradient(to left bottom, #000, rgba(0, 0, 0, 0.6666666667)), url(../images/hero.jpg);
+  background-size: cover;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6666666667);
+}
+.hero .blur {
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(8px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  position: relative;
+}
+.hero .blur .banner {
+  margin-right: 96px;
+  padding: 16px;
+  background-color: rgba(255, 255, 255, 0.1333333333);
+  backdrop-filter: blur(8px);
+  border-radius: 16px;
+  color: #ddd;
+}
+.hero .blur .banner img {
+  display: block;
+  margin: 0 auto;
+  object-fit: cover;
+  border-radius: 16px;
+  width: 250px;
+  height: 250px;
+}
+.hero .blur .banner h4 {
+  margin-top: 16px;
+}
+.hero .blur .banner > p {
+  font-size: 0.7rem;
+  font-weight: 300;
+  margin-bottom: 16px;
+}
+.hero .blur .banner .play-buttons {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.hero .blur .banner .play-buttons svg {
+  width: 24px;
+  height: 24px;
+}
+.hero .blur .banner .play-buttons svg:nth-of-type(2) {
+  width: 32px;
+  height: 32px;
+}
+.hero .blur .banner .play-area {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 8px;
+  margin-top: 16px;
+}
+.hero .blur .banner .play-area > p {
+  font-size: 0.7rem;
+}
+.hero .blur .banner .play-area .duration-bar {
+  width: 70%;
+  height: 4px;
+  border: 1px solid rgba(119, 119, 119, 0.6);
+  position: relative;
+}
+.hero .blur .banner .play-area .duration-bar .current-bar {
+  width: 40%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #f33;
+  box-shadow: 1px 1px 14px #f00;
+}
+.hero .blur .banner .play-area .duration-bar .current-circle {
+  width: 12px;
+  height: 12px;
+  position: absolute;
+  left: 40%;
+  top: 50%;
+  background-color: #f33;
+  box-shadow: 1px 1px 14px #f00;
+  border-radius: 9999px;
+  transform: translate(-50%, -50%);
+}
+.hero .blur .textbox {
+  width: 50%;
+  color: #eee;
+  padding-top: 64px;
+}
+.hero .blur .textbox h1 {
+  font-size: 3rem;
+  line-height: 1;
+  font-weight: 500;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+}
+.hero .blur .textbox .slogan {
+  font-weight: 300;
+  color: #ddd;
+}
+.hero .blur .textbox .playlist {
+  margin-top: 32px;
+}
+.hero .blur .textbox .playlist .header {
+  font-weight: 600;
+}
+.hero .blur .textbox .playlist .song-tracks {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+.hero .blur .textbox .playlist .song-tracks .song-track {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 12px;
+  border-radius: 16px;
+  background-color: rgba(255, 255, 255, 0.0666666667);
+  backdrop-filter: blur(8px);
+  margin: 16px 16px 0;
+}
+.hero .blur .textbox .playlist .song-tracks .song-track img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 16px;
+}
+.hero .blur .textbox .playlist .song-tracks .song-track p {
+  font-size: 0.7rem;
+  margin-top: 4px;
+  letter-spacing: 1px;
+}
+
+.category {
+  padding-top: 32px;
+}
+.category h1 {
+  font-size: 2.5rem;
+  line-height: 1;
+}
+.category > p {
+  letter-spacing: 1px;
+  font-weight: 300;
+  margin-bottom: 8px;
+}
+.category hr {
+  border-color: rgba(221, 221, 221, 0.3333333333);
+}
+.category .category-box {
+  display: flex;
+  padding: 64px;
+}
+.category .category-box .options {
+  width: 200px;
+}
+.category .category-box .options p {
+  font-size: 14px;
+}
+.category .category-box .options .topic {
+  font-size: 16px;
+  line-height: 2;
+}
+.category .category-box .showbox {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+}
+.category .category-box .showbox > div {
+  overflow: hidden;
+  position: relative;
+}
+.category .category-box .showbox > div .song-name {
+  width: 60%;
+  height: 32px;
+  line-height: 32px;
+  padding-left: 8px;
+  background-color: #f33;
+  position: absolute;
+  top: 15%;
+  border-radius: 0 9999px 9999px 0;
+  z-index: 10;
+}
+.category .category-box .showbox > div .gradient {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right bottom, #100, rgba(0, 0, 0, 0.4666666667));
+  position: absolute;
+}
+.category .category-box .showbox > div img {
+  width: 200px;
+  height: 200px;
+  border-radius: 16px;
+  object-fit: cover;
+  filter: grayscale(0.8);
+  transition: all 300ms;
+}
+.category .category-box .showbox > div .textbox {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  padding: 8px 8px 28px;
+  backdrop-filter: blur(8px);
+  transform: translateY(100%);
+  transition: all 500ms;
+}
+.category .category-box .showbox > div .textbox p {
+  font-size: 12px;
+  padding-left: 4px;
+}
+.category .category-box .showbox > div:hover img {
+  filter: none;
+}
+.category .category-box .showbox > div:hover .textbox {
+  transform: translateY(0);
+}
+
+.package,
+.partner {
+  margin: 16px 0 48px;
+}
+.package > p,
+.package > h1,
+.partner > p,
+.partner > h1 {
+  text-align: center;
+}
+.package > h1,
+.partner > h1 {
+  font-size: 2rem;
+}
+.package .package-showbox,
+.partner .package-showbox {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  margin-top: 32px;
+}
+.package .package-showbox .package-box,
+.partner .package-showbox .package-box {
+  text-align: center;
+  padding: 16px;
+  width: 28%;
+  border: 1px solid #d99;
+  background-color: #222;
+  backdrop-filter: blur(16px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.package .package-showbox .package-box:hover,
+.partner .package-showbox .package-box:hover {
+  box-shadow: 0 0 16px #f33;
+}
+.package .package-showbox .package-box > h3,
+.partner .package-showbox .package-box > h3 {
+  font-size: 1.5rem;
+}
+.package .package-showbox .package-box .price-gp .price,
+.partner .package-showbox .package-box .price-gp .price {
+  font-size: 1.3rem;
+  margin: 16px 0;
+}
+.package .package-showbox .package-box button,
+.partner .package-showbox .package-box button {
+  width: 80%;
+  background: #f33;
+  color: #ddd;
+  border: none;
+  padding: 8px 24px;
+}
+
+.partner .partner-showbox {
+  overflow-x: hidden;
+}
+.partner .partner-showbox .slider {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+.partner .partner-showbox .slider .partner-circle {
+  flex-shrink: 0;
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+  padding: 4px;
+  border-radius: 50%;
+  border: 1px solid #ddd;
+}
+.partner .partner-showbox .slider .partner-circle img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+}
+
+@media (max-width: 576px) {
+  .nav-toggle {
+    transform: translateY(-100%);
+  }
+  .navbar {
+    padding: 8px 24px;
+    margin: 0;
+  }
+  .navbar .nav-open {
+    display: block;
+    color: #fff;
+  }
+  .navbar nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    overflow-y: hidden;
+    z-index: 10;
+  }
+  .navbar nav .nav-close {
+    display: block;
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    z-index: 20;
+  }
+  .navbar nav ul {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(to bottom, #ddd, rgba(221, 221, 221, 0.6666666667));
+    backdrop-filter: blur(8px);
+    z-index: 1000;
+  }
+  .navbar nav ul li {
+    list-style: none;
+  }
+  .navbar nav ul li a {
+    color: #000;
+    text-decoration: none;
+  }
+  .hero .blur {
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 96px;
+  }
+  .hero .blur .banner {
+    margin: 0;
+  }
+  .hero .blur .textbox {
+    padding-top: 16px;
+    width: 94%;
+    margin: 0 auto;
+    border-radius: 16px;
+    text-align: center;
+  }
+  .hero .blur .textbox h1 {
+    font-size: 2rem;
+  }
+  .hero .blur .textbox .playlist .song-tracks {
+    justify-content: flex-start;
+  }
+  .hero .blur .textbox .playlist .song-tracks .song-track {
+    margin: 8px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
