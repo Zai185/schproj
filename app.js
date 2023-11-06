@@ -1,5 +1,7 @@
 const nav = document.querySelector('nav')
-
+const account = document.querySelector('.account')
+const accountName = document.querySelector('.account > p')
+const loginAcc = document.querySelector('.login-acc')
 
 // For NavBar{yellow, 5
 function toggleNav() {
@@ -38,6 +40,14 @@ window.addEventListener('scroll', e => {
 
 
 })
+
+if(localStorage.getItem('email')){
+    const email = localStorage.getItem('email')
+    account.style.display = 'flex'
+    accountName.innerHTML = email[0].toUpperCase()
+    loginAcc.style.display = 'none'
+
+}
 
 //createing packages
 // const packageShowbox = document.querySelector('.package-showbox')

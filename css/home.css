@@ -1,5 +1,6 @@
+@charset "UTF-8";
 section {
-  margin: 16px 0;
+  padding: 32px 64px;
 }
 
 .hero {
@@ -38,31 +39,37 @@ section {
   font-family: "Marcellus", serif;
   color: var(--acent-color);
 }
-.about .beach-box {
+.about .beach-box,
+.about .glider-box {
   display: flex;
   justify-content: center;
-  margin-top: 96px;
+  margin: 96px 0;
 }
-.about .beach-box .textbox {
+.about .beach-box .textbox,
+.about .glider-box .textbox {
   width: 42%;
 }
-.about .beach-box .textbox h5 {
+.about .beach-box .textbox h5,
+.about .glider-box .textbox h5 {
   font-size: 1rem;
   font-weight: lighter;
   letter-spacing: 2px;
   padding-left: 8px;
 }
-.about .beach-box .textbox h1 {
+.about .beach-box .textbox h1,
+.about .glider-box .textbox h1 {
   font-size: 3rem;
   text-transform: capitalize;
   margin-bottom: 8px;
   line-height: 1.2;
 }
-.about .beach-box .textbox p {
+.about .beach-box .textbox p,
+.about .glider-box .textbox p {
   font-size: 0.9rem;
   line-height: 1.4;
 }
-.about .beach-box .textbox button {
+.about .beach-box .textbox button,
+.about .glider-box .textbox button {
   margin-top: 16px;
   padding: 8px 24px;
   background: transparent;
@@ -71,11 +78,13 @@ section {
   border: 1px solid rgba(170, 170, 170, 0.6666666667);
   background: var(--acent-color);
 }
-.about .beach-box .imgbox {
+.about .beach-box .imgbox,
+.about .glider-box .imgbox {
   position: relative;
   width: 40%;
 }
-.about .beach-box .imgbox img {
+.about .beach-box .imgbox img,
+.about .glider-box .imgbox img {
   position: absolute;
   top: 30%;
   left: 50%;
@@ -84,17 +93,139 @@ section {
   height: 148px;
   object-fit: cover;
 }
-.about .beach-box .imgbox .beach {
+.about .beach-box .imgbox .beach,
+.about .glider-box .imgbox .beach {
   width: 148px;
   height: 200px;
   z-index: 3;
   transform: translate(-48%, -8%);
 }
-.about .beach-box .imgbox .sand {
+.about .beach-box .imgbox .sand,
+.about .glider-box .imgbox .sand {
   transform: translate(0, 74%);
 }
-.about .beach-box .imgbox .hill {
+.about .beach-box .imgbox .hill,
+.about .glider-box .imgbox .hill {
   transform: translate(0, -60%);
+}
+.about .glider-box .imgbox {
+  width: 42%;
+}
+.about .glider-box .imgbox img {
+  height: auto;
+  top: 0%;
+  left: 12%;
+  transform: none;
+  width: 50%;
+  height: 200px;
+}
+.about .glider-box .imgbox .glider {
+  transform: translate(0, 0);
+}
+.about .glider-box .imgbox .para {
+  top: 40%;
+  left: 32%;
+}
+.about .glider-box .textbox {
+  width: 40%;
+}
+.about hr {
+  width: 50%;
+  margin: 16px auto;
+  border-color: var(--acent-color);
+}
+
+.trust {
+  padding: 32px 0;
+  background: var(--secondary-color);
+}
+.trust * {
+  font-family: "Marcellus", serif;
+}
+.trust .facts {
+  margin-top: 48px;
+  text-align: center;
+}
+.trust .facts li {
+  font-size: 1.5rem;
+  list-style: none;
+  text-transform: capitalize;
+  letter-spacing: 2px;
+  margin-bottom: 48px;
+}
+.trust .facts li::before, .trust .facts li::after {
+  content: " - ";
+}
+
+.reviews {
+  height: 500px;
+  position: relative;
+}
+.reviews * {
+  font-family: "Marcellus", serif;
+  color: var(--acent-color);
+}
+.reviews .review {
+  position: absolute;
+  width: 300px;
+  padding: 16px 24px;
+  border-radius: 16px;
+  background-color: var(--secondary-color);
+  border: 1px solid var(--secondary-color);
+  transition: all 300ms;
+}
+.reviews .review .user {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.reviews .review .user img {
+  border-radius: 9999px;
+  width: 48px;
+  height: 48px;
+  padding: 8px;
+  background: #111;
+  border: 1px solid rgba(221, 221, 221, 0.2);
+}
+.reviews .review .user .user-info h4 {
+  font-family: Arial, Helvetica, sans-serif;
+  letter-spacing: 1px;
+}
+.reviews .review .user .user-info p {
+  font-size: 0.8rem;
+}
+.reviews .review hr {
+  margin: 8px 0;
+  border-color: rgba(238, 238, 238, 0.2);
+}
+.reviews .review .comment p {
+  font-size: 1.3rem;
+  line-height: 2rem;
+  text-align: center;
+}
+.reviews .review .comment p::before {
+  font-size: 2rem;
+  content: "“";
+}
+.reviews .review .comment p::after {
+  font-size: 2rem;
+  content: "”";
+}
+.reviews .review.one {
+  top: 30%;
+  left: 40%;
+}
+.reviews .review.two {
+  top: 40%;
+  left: 70%;
+}
+.reviews .review.three {
+  top: 50%;
+  left: 10%;
+}
+.reviews .review:hover {
+  transform: translate(-5%, -5%);
+  box-shadow: 16px 16px 16px rgba(0, 0, 0, 0.6666666667);
 }
 
 /*# sourceMappingURL=home.css.map */

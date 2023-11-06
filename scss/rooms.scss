@@ -1,0 +1,193 @@
+section {
+    padding: 32px 128px;
+}
+
+.hero {
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 128px;
+    background: linear-gradient(to right, #10242ef2, #050f15aa 90%, #06131a00), url(../images/hotelroomshow.webp);
+    background-size: cover;
+
+    .textbox {
+        width: 40%;
+        margin-left: 128px;
+
+
+        h5 {
+            font-size: 1rem;
+            font-weight: lighter;
+            letter-spacing: 2px;
+            padding-left: 8px;
+        }
+
+        h1 {
+            font-size: 3rem;
+            text-transform: capitalize;
+            margin-bottom: 8px;
+            line-height: 1.2;
+        }
+
+        p {
+            font-size: 0.9rem;
+            line-height: 1.4;
+        }
+
+        button {
+            margin-top: 16px;
+            padding: 8px 24px;
+            background: transparent;
+            color: #111;
+            font-weight: bold;
+            border: 1px solid #aaaa;
+            background: var(--acent-color);
+        }
+    }
+
+    .imgbox {
+        width: 40%;
+        height: 100%;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}
+
+.rooms {
+    .discount-box {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 96px 0;
+        gap: 32px;
+
+        .textbox {
+            width: 42%;
+
+            h5 {
+                font-size: 1rem;
+                font-weight: lighter;
+                letter-spacing: 2px;
+                padding-left: 8px;
+            }
+
+            h1 {
+                font-size: 3rem;
+                text-transform: capitalize;
+                margin-bottom: 8px;
+                line-height: 1.2;
+            }
+
+            p {
+                font-size: 0.9rem;
+                line-height: 1.4;
+            }
+
+            button {
+                margin-top: 16px;
+                padding: 8px 24px;
+                background: transparent;
+                color: #111;
+                font-weight: bold;
+                border: 1px solid #aaaa;
+                background: var(--acent-color);
+            }
+        }
+
+        .imgbox{
+            width: 40%;
+            img{
+                width: 100%;
+            }
+        }
+
+        .countdown{
+            width: 100%;
+            text-align: center;
+            padding: 12px 0;
+            display: flex;
+            border-top: 1px solid var(--secondary-color);
+            border-bottom: 1px solid var(--secondary-color);
+            gap: 32px;
+            justify-content: center;
+            align-items: center;
+
+            .timebox{
+                font-weight: bold;
+                font-size: 1.1rem;
+                .time{
+                    padding: 8px 4px;
+                }
+            }
+
+        }
+    }
+
+    .rooms-box {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+
+        .room {
+            background: var(--secondary-color);
+            overflow: hidden;
+            border-radius: 16px;
+            border: 1px solid #fff5;
+            width: 23%;
+            padding-bottom: 16px;
+
+            .imgbox {
+                width: 100%;
+                height: 200px;
+                overflow: hidden;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    transition: all 300ms;
+
+                    &:hover {
+                        transform: scale(1.3);
+                    }
+                }
+            }
+
+            .textbox {
+                padding: 8px 16px;
+
+                h3 {
+                    margin-bottom: 16px;
+                }
+
+                .slogan {
+                    font-size: 0.9rem;
+                    letter-spacing: 1px;
+                    font-weight: lighter;
+                    font-family: Arial, Helvetica, sans-serif;
+                }
+
+                .price {
+                    line-height: 3;
+                    font-size: 1.2rem;
+                }
+
+                button {
+                    background: var(--main-color);
+                    border: 1px solid #fff3;
+                    padding: 4px 8px;
+
+                    &:hover {
+                        background: var(--secondary-color);
+                    }
+                }
+            }
+        }
+    }
+}

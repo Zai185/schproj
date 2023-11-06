@@ -5,10 +5,14 @@
   margin: 0;
   box-sizing: border-box;
   font-family: "Cinzel", serif;
+  scroll-behavior: smooth;
+  scroll-padding-top: 128px;
 }
 
 :root {
   --acent-color: #cca17e;
+  --main-color: #10242e;
+  --secondary-color: #06131a;
 }
 
 svg {
@@ -17,15 +21,35 @@ svg {
 }
 
 body {
-  background: #10242e;
+  background: var(--main-color);
 }
 
-a, button {
+a,
+button {
   cursor: pointer;
+  transition: all 300ms;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+.header h2 {
+  letter-spacing: 2px;
+  line-height: 2;
+}
+.header p {
+  letter-spacing: 4px;
+  font-weight: 100;
+  text-transform: capitalize;
+}
+.header hr {
+  width: 20%;
+  margin: 8px auto;
 }
 
 .trigger {
-  transition: all 500ms;
+  transition: all 700ms;
   transform: translateY(32px);
   opacity: 0;
 }
@@ -89,18 +113,13 @@ hr {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 8px 48px;
-  margin-top: 16px;
+  padding: 24px 48px;
   z-index: 10;
 }
 .navbar img {
-  width: 48px;
-  height: 48px;
+  width: 64px;
+  height: 64px;
   transition: all 300ms;
-}
-.navbar img:hover {
-  transform: translateX(-4px);
-  filter: drop-shadow(12px 4px 2px rgba(68, 68, 68, 0.5333333333));
 }
 .navbar .nav-open {
   display: none;
@@ -127,19 +146,111 @@ hr {
   transition: all 100ms;
 }
 .navbar .account {
-  display: flex;
+  display: none;
   align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 9999px;
+  background-color: var(--secondary-color);
   gap: 8px;
+  border: 1px solid var(--acent-color);
 }
-.navbar .account > p {
+.navbar .account p {
   font-weight: 400;
-  letter-spacing: 1px;
+  font-size: 1.5rem;
   font-family: Arial, Helvetica, sans-serif;
 }
-.navbar .account img {
-  width: 40px;
-  height: 40px;
-  border-radius: 9999px;
+.navbar .login {
+  border: 1px solid var(--secondary-color);
+  background-color: var(--main-color);
+  color: #ddd;
+  padding: 8px 16px;
+  border-radius: 8px;
+}
+.navbar .login:hover {
+  background: var(--secondary-color);
+}
+.navbar .login a {
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.2rem;
+  font-weight: 0;
+}
+
+.footer {
+  background-color: var(--secondary-color);
+  padding: 32px 128px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 64px;
+}
+.footer .logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.footer .logo img {
+  width: 128px;
+  height: 128px;
+  object-fit: cover;
+}
+.footer .logo .social-apps svg {
+  width: 24px;
+  margin: 0 8px;
+}
+.footer .logo p {
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+.footer .content {
+  padding: 8px;
+}
+.footer .content h3 {
+  margin-bottom: 48px;
+}
+.footer .content p {
+  line-height: 2;
+}
+.footer .contact-form {
+  width: 50%;
+  flex-grow: 1;
+  padding: 8px 16px;
+}
+.footer .contact-form h3 {
+  margin-bottom: 16px;
+}
+.footer .contact-form input,
+.footer .contact-form textarea,
+.footer .contact-form button {
+  background: transparent;
+  border: 1px solid rgba(221, 221, 221, 0.3333333333);
+  padding: 8px 16px;
+  border-radius: 8px;
+}
+.footer .contact-form button {
+  background: rgb(227, 168, 6);
+  color: var(--secondary-color);
+  font-weight: 800;
+  display: block;
+}
+.footer .contact-form #name,
+.footer .contact-form #email {
+  margin-right: 16px;
+  width: 40%;
+  margin-bottom: 16px;
+}
+.footer .contact-form #textarea {
+  width: calc(80% + 16px);
+  resize: none;
+}
+
+.copyright {
+  background: #000;
+  font-size: 0.8rem;
+  padding: 8px;
+  text-align: center;
 }
 
 @keyframes fade-up {

@@ -8,10 +8,15 @@
     margin: 0;
     box-sizing: border-box;
     font-family: 'Cinzel', serif;
+    scroll-behavior: smooth;
+    scroll-padding-top: 128px;
+
 }
 
-:root{
-    --acent-color : #cca17e;
+:root {
+    --acent-color: #cca17e;
+    --main-color: #10242e;
+    --secondary-color: #06131a;
 }
 
 svg {
@@ -20,15 +25,39 @@ svg {
 }
 
 body {
-    background: #10242e;
+    background: var(--main-color);
 }
 
-a,button{
+a,
+button {
     cursor: pointer;
+    transition: all 300ms;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 32px;
+
+    h2 {
+        letter-spacing: 2px;
+        line-height: 2;
+
+    }
+
+    p {
+        letter-spacing: 4px;
+        font-weight: 100;
+        text-transform: capitalize;
+    }
+
+    hr {
+        width: 20%;
+        margin: 8px auto;
+    }
 }
 
 .trigger {
-    transition: all 500ms;
+    transition: all 700ms;
     transform: translateY(32px);
     opacity: 0;
 }
@@ -100,20 +129,13 @@ hr {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 8px 48px;
-    margin-top: 16px;
+    padding: 24px 48px;
     z-index: 10;
 
     img {
-        width: 48px;
-        height: 48px;
+        width: 64px;
+        height: 64px;
         transition: all 300ms;
-
-
-        &:hover {
-            transform: translateX(-4px);
-            filter: drop-shadow(12px 4px 2px #4448);
-        }
     }
 
     .nav-open {
@@ -149,22 +171,132 @@ hr {
     }
 
     .account {
-        display: flex;
+        display: none;
         align-items: center;
+        justify-content: center;
+        width: 48px;
+        height: 48px;
+        border-radius: 9999px;
+        background-color: var(--secondary-color);
         gap: 8px;
+        border: 1px solid var(--acent-color);
 
-        >p {
+        p {
             font-weight: 400;
-            letter-spacing: 1px;
+            font-size: 1.5rem;
             font-family: Arial, Helvetica, sans-serif;
         }
+    }
 
-        img {
-            width: 40px;
-            height: 40px;
-            border-radius: 9999px;
+    .login {
+        border: 1px solid var(--secondary-color);
+        background-color: var(--main-color);
+        color: #ddd;
+        padding: 8px 16px;
+        border-radius: 8px;
+        &:hover{
+            background: var(--secondary-color);
+        }
+
+        a {
+            text-decoration: none;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1.2rem;
+            font-weight: 00;
         }
     }
+}
+
+.footer {
+    background-color: var(--secondary-color);
+    padding: 32px 128px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 64px;
+
+    .logo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        img {
+            width: 128px;
+            height: 128px;
+            object-fit: cover;
+        }
+
+        .social-apps {
+            svg {
+                width: 24px;
+                margin: 0 8px;
+            }
+        }
+
+        p {
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+    }
+
+    .content {
+        padding: 8px;
+
+        h3 {
+            margin-bottom: 48px;
+        }
+
+        p {
+            line-height: 2;
+        }
+    }
+
+    .contact-form {
+        width: 50%;
+        flex-grow: 1;
+        padding: 8px 16px;
+
+        h3 {
+            margin-bottom: 16px;
+        }
+
+        input,
+        textarea,
+        button {
+            background: transparent;
+            border: 1px solid #ddd5;
+            padding: 8px 16px;
+            border-radius: 8px;
+        }
+
+        button {
+            background: rgb(227, 168, 6);
+            color: var(--secondary-color);
+            font-weight: 800;
+            display: block;
+        }
+
+
+        #name,
+        #email {
+            margin-right: 16px;
+            width: 40%;
+            margin-bottom: 16px;
+        }
+
+        #textarea {
+            width: calc(80% + 16px);
+            resize: none;
+        }
+    }
+}
+
+.copyright {
+    background: #000;
+    font-size: 0.8rem;
+    padding: 8px;
+    text-align: center;
+
 }
 
 

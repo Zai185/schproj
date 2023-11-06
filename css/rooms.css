@@ -1,0 +1,164 @@
+section {
+  padding: 32px 128px;
+}
+
+.hero {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: 128px;
+  background: linear-gradient(to right, rgba(16, 36, 46, 0.9490196078), rgba(5, 15, 21, 0.6666666667) 90%, rgba(6, 19, 26, 0)), url(../images/hotelroomshow.webp);
+  background-size: cover;
+}
+.hero .textbox {
+  width: 40%;
+  margin-left: 128px;
+}
+.hero .textbox h5 {
+  font-size: 1rem;
+  font-weight: lighter;
+  letter-spacing: 2px;
+  padding-left: 8px;
+}
+.hero .textbox h1 {
+  font-size: 3rem;
+  text-transform: capitalize;
+  margin-bottom: 8px;
+  line-height: 1.2;
+}
+.hero .textbox p {
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+.hero .textbox button {
+  margin-top: 16px;
+  padding: 8px 24px;
+  background: transparent;
+  color: #111;
+  font-weight: bold;
+  border: 1px solid rgba(170, 170, 170, 0.6666666667);
+  background: var(--acent-color);
+}
+.hero .imgbox {
+  width: 40%;
+  height: 100%;
+}
+.hero .imgbox img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.rooms .discount-box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 96px 0;
+  gap: 32px;
+}
+.rooms .discount-box .textbox {
+  width: 42%;
+}
+.rooms .discount-box .textbox h5 {
+  font-size: 1rem;
+  font-weight: lighter;
+  letter-spacing: 2px;
+  padding-left: 8px;
+}
+.rooms .discount-box .textbox h1 {
+  font-size: 3rem;
+  text-transform: capitalize;
+  margin-bottom: 8px;
+  line-height: 1.2;
+}
+.rooms .discount-box .textbox p {
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+.rooms .discount-box .textbox button {
+  margin-top: 16px;
+  padding: 8px 24px;
+  background: transparent;
+  color: #111;
+  font-weight: bold;
+  border: 1px solid rgba(170, 170, 170, 0.6666666667);
+  background: var(--acent-color);
+}
+.rooms .discount-box .imgbox {
+  width: 40%;
+}
+.rooms .discount-box .imgbox img {
+  width: 100%;
+}
+.rooms .discount-box .countdown {
+  width: 100%;
+  text-align: center;
+  padding: 12px 0;
+  display: flex;
+  border-top: 1px solid var(--secondary-color);
+  border-bottom: 1px solid var(--secondary-color);
+  gap: 32px;
+  justify-content: center;
+  align-items: center;
+}
+.rooms .discount-box .countdown .timebox {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+.rooms .discount-box .countdown .timebox .time {
+  padding: 8px 4px;
+}
+.rooms .rooms-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.rooms .rooms-box .room {
+  background: var(--secondary-color);
+  overflow: hidden;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.3333333333);
+  width: 23%;
+  padding-bottom: 16px;
+}
+.rooms .rooms-box .room .imgbox {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+.rooms .rooms-box .room .imgbox img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 300ms;
+}
+.rooms .rooms-box .room .imgbox img:hover {
+  transform: scale(1.3);
+}
+.rooms .rooms-box .room .textbox {
+  padding: 8px 16px;
+}
+.rooms .rooms-box .room .textbox h3 {
+  margin-bottom: 16px;
+}
+.rooms .rooms-box .room .textbox .slogan {
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  font-weight: lighter;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.rooms .rooms-box .room .textbox .price {
+  line-height: 3;
+  font-size: 1.2rem;
+}
+.rooms .rooms-box .room .textbox button {
+  background: var(--main-color);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 4px 8px;
+}
+.rooms .rooms-box .room .textbox button:hover {
+  background: var(--secondary-color);
+}
+
+/*# sourceMappingURL=rooms.css.map */
